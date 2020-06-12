@@ -76,7 +76,6 @@ class UpdateAssociationTranslatorTest {
                 .outputLocation(MODEL_OUTPUT_LOCATION)
                 .automationTargetParameterName(AUTOMATION_TARGET_PARAMETER_NAME)
                 .syncCompliance(SYNC_COMPLIANCE)
-                .applyOnlyAtCronInterval(true)
                 .build();
 
         final UpdateAssociationRequest createAssociationRequest =
@@ -97,9 +96,7 @@ class UpdateAssociationTranslatorTest {
                 .outputLocation(SERVICE_OUTPUT_LOCATION)
                 .automationTargetParameterName(AUTOMATION_TARGET_PARAMETER_NAME)
                 .syncCompliance(SYNC_COMPLIANCE)
-                .applyOnlyAtCronInterval(true)
                 .build();
-        src/test/java/com/amazonaws/ssm/association/translator/request/CreateAssociationTranslatorTest.java
 
         assertThat(createAssociationRequest).isEqualTo(expectedRequest);
     }

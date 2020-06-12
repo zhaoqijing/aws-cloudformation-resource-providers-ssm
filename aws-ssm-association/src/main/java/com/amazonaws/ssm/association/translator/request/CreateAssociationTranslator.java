@@ -49,8 +49,7 @@ public class CreateAssociationTranslator implements RequestTranslator<CreateAsso
     public CreateAssociationRequest resourceModelToRequest(final ResourceModel model) {
         final CreateAssociationRequest.Builder createAssociationRequestBuilder =
             CreateAssociationRequest.builder()
-                .name(model.getName())
-                .applyOnlyAtCronInterval(model.getApplyOnlyAtCronInterval());
+                .name(model.getName());
 
         simpleTypeValidator.getValidatedString(model.getAssociationName())
             .ifPresent(createAssociationRequestBuilder::associationName);
